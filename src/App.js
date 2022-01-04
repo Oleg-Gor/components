@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Sanbox from './components/chip/Sandbox';
-import Example from './components/chip/Example';
+
+import Sandbox from "./components/modal/Sandbox"
+
 function App() {
   return (<>
-    <Sanbox />
-    <Example />
+    <Sandbox />
   </>);
 }
 

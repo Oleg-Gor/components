@@ -4,23 +4,24 @@ import classNames from "classnames"
 
 import "./Button.css"
 
-const Button = ({ children, onClick, className, disabled, active, ...attrs }) => {
+const Button = ({ children, onClick, className, disabled, active, invert, ...attrs }) => {
 
-const onClickAction = e => {
-    if (disabled) {
-        e.preventDefault()
-    } else {
-        return onClick(e)
+    const onClickAction = e => {
+        if (disabled) {
+            e.preventDefault()
+        } else {
+            return onClick(e)
+        }
     }
-}
 
     const classes = classNames(
         'btn',
         className,
         { active },
+        { invert }
     )
 
-const Tag = attrs.href ? 'a': 'button';
+    const Tag = attrs.href ? 'a' : 'button';
 
     return (
         <Tag
@@ -46,6 +47,7 @@ Button.defaultProps = {
     className: '',
     disabled: false,
     active: false,
+    invert: false
 }
 
 

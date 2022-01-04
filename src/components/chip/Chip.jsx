@@ -6,9 +6,17 @@ import Image from '../image/Image'
 
 import './Chip.css'
 
-const Chip = ({ text, withImage, withIcon, withClose,
-    imageSrc, imgAlt, iconName, className,
-    id, onChipClick, onCloseClick,
+const Chip = ({ text,
+    withImage,
+    withIcon,
+    withClose,
+    imageSrc,
+    imgAlt,
+    iconName,
+    className,
+    id,
+    onChipClick,
+    onCloseClick,
     ...attrs }) => {
 
     const classes = classNames(
@@ -38,7 +46,7 @@ const Chip = ({ text, withImage, withIcon, withClose,
             }
             <span className='chipText'>{text}</span>
             {withClose &&
-                <span className='chipClose' onClick = {onCloseClickAction}>
+                <span className='chipClose' onClick={onCloseClickAction}>
                     <Icon name="times" />
                 </span>
             }
